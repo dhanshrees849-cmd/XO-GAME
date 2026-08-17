@@ -1,42 +1,28 @@
-import java.util.scanner;
+import java.util.Scanner;
 class Main{
-  public static void main(String[]args){
-    Scanner sc=new Scanner(System.in);
-    char[]board={'','','','','','','','',''};
-    char player='X';
-    for(int turn=1;turn<=9;turn++){
-       System.out.println("Player"+player+",enter position(1-9):");
-       int pos=sc.nextInt();
-        if(pos<1||pos>9){
-           System.out.println("Enter position between 1 and 9!");
-        turn--;
-       continue;
-       }
-      if(board[pos-1]==''){
-         board[pos-1]=player;
-      }else{
-       System.out.println("Position already filled!");
-     turn--;
-    continue;
-      }
+public static void main(String[]arts){
+Scanner sc=new Scanner(System.in);
+char[] board={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+chat player='X';
+for(int turn=1;turn<=9;turn++) {
+System.out.println("Player"+player+", enter position (1-9):") ;
+int pos=sc.nextInt() ;
+if(board[pos-1]==' ') {
+board[pos-1]=player;
+}else{
+System.out.println("Position already filled!");
+turn--;
+continue;
+}
 System.out.println(board[0]+"|"+board[1]+"|"+board[2]);
 System.out.println("-+-+-");
 System.out.println(board[3]+"|"+board[4]+"|"+board[5]);
 System.out.println("-+-+-");
-System.out.println(board[6]+"|"+board[7]+"|"+board[8]);
-   if((board[0]==player && board[1]==player && board[2]==player)||(board[3]==player && board[4]==player && board[5]==player)||(board[6]==player && board[7]==player && board[8]==player)||(board[0]==player && board[3]==player && board[6]== player)||(board[1]==player && board[4]==player && board[7]==player)||(board[2]==player && board[5]==player && board[8]==player)||(board[0]==player && board[4]== player && board[8]== player)||(board[2]==player && board[4]==player && board[6]==player)){
-System.out.println("Player"+player+"wins!");
-break;
-}
-if(turn==9){
-System.out.println("Game Draw!");
-break;
-}
-if(player=='X')
+System.out.println(board[6]+"|"+board[7]+"|"+board[8]) ;
+if(player=='X') 
 player='O';
 else
-player='X';
+ player='X';
 }
 }
 }
- 
